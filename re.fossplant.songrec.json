@@ -1,8 +1,8 @@
 {
     "app-id": "re.fossplant.songrec",
-    "runtime": "org.freedesktop.Platform",
-    "runtime-version": "25.08",
-    "sdk": "org.freedesktop.Sdk",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "49",
+    "sdk": "org.gnome.Sdk",
     "sdk-extensions" : [
         "org.freedesktop.Sdk.Extension.rust-stable"
     ],
@@ -29,14 +29,14 @@
                 "cargo --offline fetch --verbose",
                 "cargo --offline build --release --verbose",
                 "install -Dm755 ./target/release/songrec -t /app/bin/",
-                "cp -ra ./packaging/rootfs/usr/share /app/",
-                "cp -ra ./translations/locale /app/share/"
+                "cp -r ./packaging/rootfs/usr/share /app/",
+                "cp -r ./translations/locale /app/share/"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/marin-m/SongRec/releases/download/0.5.0/songrec_tarball_0.5.0_for_flathub_build.tar.gz",
-                    "sha256": "3b13a1fe06c129aeb4b80ee54bde65f8bd5572351da9487d9e6a2ddbc8dadd22"
+                    "url": "https://github.com/marin-m/SongRec/releases/download/0.6.0/songrec_tarball_0.6.0_for_flathub_build.tar.gz",
+                    "sha256": "e5a90c717089ca0e7b6a9774b4f0a0f8e005f8372e34a93fc6edf5466a38cec5"
                 }
             ]
         }
