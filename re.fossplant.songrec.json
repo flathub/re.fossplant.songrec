@@ -2,11 +2,11 @@
     "app-id": "re.fossplant.songrec",
     "runtime": "org.gnome.Platform",
     "runtime-version": "49",
+    "command": "songrec",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions" : [
         "org.freedesktop.Sdk.Extension.rust-stable"
     ],
-    "command": "songrec",
     "finish-args": [
         "--share=network",
         "--share=ipc",
