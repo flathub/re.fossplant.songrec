@@ -13,6 +13,7 @@
         "--socket=fallback-x11",
         "--socket=wayland",
         "--device=all",
+        "--talk-name=org.kde.StatusNotifierWatcher",
         "--socket=pulseaudio"
     ],
     "build-options": {
@@ -35,8 +36,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/marin-m/SongRec/releases/download/0.6.3/songrec_tarball_0.6.3_for_flathub_build.tar.gz",
-                    "sha256": "dd56df15e4e212aeaf0f1351712d5d95013219b5cb19815627cf8e1b04fedf0e"
+                    "url": "https://github.com/marin-m/SongRec/releases/download/0.6.4/songrec_tarball_0.6.4_for_flathub_build.tar.gz",
+                    "sha256": "10a4d5054a437920dae2f1bcdd39f6d5738a81b3b91877ad39663659c4281c1f"
                 }
             ]
         }
