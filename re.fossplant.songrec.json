@@ -2,8 +2,8 @@
     "app-id": "re.fossplant.songrec",
     "runtime": "org.gnome.Platform",
     "runtime-version": "49",
-    "command": "songrec",
     "sdk": "org.gnome.Sdk",
+    "command": "songrec",
     "sdk-extensions" : [
         "org.freedesktop.Sdk.Extension.rust-stable"
     ],
