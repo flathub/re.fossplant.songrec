@@ -1,7 +1,7 @@
 {
     "app-id": "re.fossplant.songrec",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "49",
+    "runtime-version": "50",
     "sdk": "org.gnome.Sdk",
     "command": "songrec",
     "sdk-extensions" : [
@@ -36,8 +36,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/marin-m/SongRec/releases/download/0.6.7/songrec_tarball_0.6.7_for_flathub_build.tar.gz",
-                    "sha256": "dd769dcb1b8fcbaec2924926df5e6a6107ccf37f32f94c8454ad577d94cd21f8"
+                    "url": "https://github.com/marin-m/SongRec/releases/download/untagged-85b9ae378e51ba2f704f/songrec_tarball_0.6.8_for_flathub_build.tar.gzgz",
+                    "sha256": "f4fee9df3bab6ebc17abcb8539565a3b8044611f4762e5e82b92bb6e021b326f"
                 }
             ]
         }
