@@ -1,11 +1,12 @@
 {
     "app-id": "re.fossplant.songrec",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "49",
+    "runtime-version": "50",
     "sdk": "org.gnome.Sdk",
     "command": "songrec",
     "sdk-extensions" : [
-        "org.freedesktop.Sdk.Extension.rust-stable"
+        "org.freedesktop.Sdk.Extension.rust-stable",
+        "org.freedesktop.Sdk.Extension.llvm22"
     ],
     "finish-args": [
         "--share=network",
@@ -14,10 +15,12 @@
         "--socket=wayland",
         "--device=all",
         "--talk-name=org.kde.StatusNotifierWatcher",
-        "--socket=pulseaudio"
+        "--socket=pulseaudio",
+        "--filesystem=xdg-run/pipewire-0"
     ],
     "build-options": {
-        "append-path" : "/usr/lib/sdk/rust-stable/bin",
+        "append-path" : "/usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/llvm22/bin",
+        "prepend-ld-library-path": "/usr/lib/sdk/llvm22/lib",
         "env" : {
             "CARGO_HOME" : "/run/build/songrec/.cargo"
         }
@@ -36,8 +39,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/marin-m/SongRec/releases/download/0.6.7/songrec_tarball_0.6.7_for_flathub_build.tar.gz",
-                    "sha256": "dd769dcb1b8fcbaec2924926df5e6a6107ccf37f32f94c8454ad577d94cd21f8"
+                    "url": "https://github.com/marin-m/SongRec/releases/download/0.6.8/songrec_tarball_0.6.8_for_flathub_build.tar.gz",
+                    "sha256": "77e515e57d084e370d62b0d1e1f26de6ceb4b04a4a8eb7af3e57209074412520"
                 }
             ]
         }
