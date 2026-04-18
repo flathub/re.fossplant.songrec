@@ -5,7 +5,8 @@
     "sdk": "org.gnome.Sdk",
     "command": "songrec",
     "sdk-extensions" : [
-        "org.freedesktop.Sdk.Extension.rust-stable"
+        "org.freedesktop.Sdk.Extension.rust-stable",
+        "org.freedesktop.Sdk.Extension.llvm22"
     ],
     "finish-args": [
         "--share=network",
@@ -14,10 +15,12 @@
         "--socket=wayland",
         "--device=all",
         "--talk-name=org.kde.StatusNotifierWatcher",
-        "--socket=pulseaudio"
+        "--socket=pulseaudio",
+        "--filesystem=xdg-run/pipewire-0"
     ],
     "build-options": {
-        "append-path" : "/usr/lib/sdk/rust-stable/bin",
+        "append-path" : "/usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/llvm22/bin",
+        "prepend-ld-library-path": "/usr/lib/sdk/llvm22/lib",
         "env" : {
             "CARGO_HOME" : "/run/build/songrec/.cargo"
         }
@@ -37,7 +40,7 @@
                 {
                     "type": "archive",
                     "url": "https://github.com/marin-m/SongRec/releases/download/0.6.8/songrec_tarball_0.6.8_for_flathub_build.tar.gz",
-                    "sha256": "f4fee9df3bab6ebc17abcb8539565a3b8044611f4762e5e82b92bb6e021b326f"
+                    "sha256": "77e515e57d084e370d62b0d1e1f26de6ceb4b04a4a8eb7af3e57209074412520"
                 }
             ]
         }
