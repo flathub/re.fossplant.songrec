@@ -31,7 +31,7 @@
             "buildsystem": "simple",
             "build-commands": [
                 "cargo --offline fetch --verbose",
-                "cargo --offline build --release --verbose",
+                "cargo --offline build --release --verbose --no-default-features -F gui,ffmpeg,pulse,mpris",
                 "install -Dm755 ./target/release/songrec -t /app/bin/",
                 "cp -r ./packaging/rootfs/usr/share /app/",
                 "cp -r ./translations/locale /app/share/"
@@ -39,8 +39,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/marin-m/SongRec/releases/download/0.6.9/songrec_tarball_0.6.9_for_flathub_build.tar.gz",
-                    "sha256": "4e06369225fc7f0473fa1e361d966bee26edef987ac0dedc3e270b42b033242e"
+                    "url": "https://github.com/marin-m/SongRec/releases/download/0.7.0/songrec_tarball_0.7.0_for_flathub_build.tar.gz",
+                    "sha256": "16a5697afc51aa68b075242bbfd300ed94dd7f0e154294a1d57d5027bfd32184"
                 }
             ]
         }
