@@ -32,7 +32,7 @@ modules:
     sources:
       - type: archive
         url: https://github.com/marin-m/SongRec/releases/download/0.7.6/songrec_tarball_0.7.6_for_flathub_build.tar.gz
-        sha256: 95b205bd581facecaa1cfa59b7c47ef621d236b6e188da0ea142008e04e5ef51
+        sha256: cc504819996ddbcca618143b1f1943c031c5c4792cc8619f1d6913d4fa94515a
         x-checker-data:
           type: json
           url: https://api.github.com/repos/marin-m/SongRec/releases/latest
