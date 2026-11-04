@@ -31,8 +31,8 @@ modules:
       - cp -r ./translations/locale /app/share/
     sources:
       - type: archive
-        url: https://github.com/marin-m/SongRec/releases/download/0.8.0/songrec_tarball_0.8.0_for_flathub_build.tar.gz
-        sha256: 478af6670e8f9574a41786f1cfc31480bc3add38b7660f76889f7eceb49459fd
+        url: https://github.com/marin-m/SongRec/releases/download/0.8.1/songrec_tarball_0.8.1_for_flathub_build.tar.gz
+        sha256: ca187ff433b3189b7fe4785afaf4820a13a6cec43a82f3950169d7c0bb989bdf
         x-checker-data:
           type: json
           url: https://api.github.com/repos/marin-m/SongRec/releases/latest
