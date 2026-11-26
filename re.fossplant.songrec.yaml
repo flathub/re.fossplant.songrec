@@ -22,17 +22,13 @@ build-options:
     CARGO_HOME: /run/build/songrec/.cargo
 modules:
   - name: songrec
-    buildsystem: simple
-    build-commands:
-      - cargo --offline fetch --verbose
-      - cargo --offline build --release --verbose --no-default-features -F gui,ffmpeg,pulse,mpris
-      - install -Dm755 ./target/release/songrec -t /app/bin/
-      - cp -r ./packaging/rootfs/usr/share /app/
-      - cp -r ./translations/locale /app/share/
+    buildsystem: meson
+    config-opts:
+      - -Dpipewire=disabled
     sources:
       - type: archive
-        url: https://github.com/marin-m/SongRec/releases/download/0.8.2/songrec_tarball_0.8.2_for_flathub_build.tar.gz
-        sha256: 9ceb8c756615da9aabcb799ee300642786af4085730600fecf30a0fef5874c1f
+        url: https://github.com/marin-m/SongRec/releases/download/0.8.3/songrec_tarball_0.8.3_for_flathub_build.tar.gz
+        sha256: eb1b9a957a77daa10e3b2a74cfa59b46ff92c7eb513142bc442203f0aac9e45d
         x-checker-data:
           type: json
           url: https://api.github.com/repos/marin-m/SongRec/releases/latest
